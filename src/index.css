@@ -77,4 +77,5 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.521);
   text-align: center;
   background-color: rgba(128, 128, 128, 0.514);
+  width: 150px;
 }

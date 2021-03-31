@@ -23,8 +23,10 @@ class App extends React.Component {
     super(props);
     this.onKeyPress = this.onKeyPress.bind(this);
     this.onButton = this.onButton.bind(this);
+    this.sliderChange = this.sliderChange.bind(this);
     this.state = {
       name: "Drum Sound",
+      volume: 100,
     };
   }
 
@@ -48,11 +50,21 @@ class App extends React.Component {
     }
   }
 
+  sliderChange = (value) => {
+    console.log(value);
+    this.setState({ volume: value });
+    console.log(this.state.volume / 100);
+  };
+
   render() {
     return (
       <div id="drum-machine">
-        <DrumPad />
-        <Controls name={this.state.name} />
+        <DrumPad volume={this.state.volume} />
+        <Controls
+          name={this.state.name}
+          volume={this.state.volume}
+          sliderChange={this.sliderChange}
+        />
       </div>
     );
   }
