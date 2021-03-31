@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgreen;
+}
+#drum-machine {
+  border: 2px solid #e1ad01;
+  background-color: white;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "buttons controls";
+}
+
+/* Drum Buttons */
+#drum-buttons {
+  margin-right: 10px;
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas:
+    "Q W E"
+    "A S D"
+    "Z X C";
+  gap: 5px 5px;
+}
+button {
+  border: 1px solid #e1ad01;
+  border-radius: 6%;
+  background-color: rgba(55, 241, 201, 0.322);
+}
+
+#Q {
+  grid-area: Q;
+}
+#W {
+  grid-area: W;
+}
+#E {
+  grid-area: E;
+}
+#A {
+  grid-area: A;
+}
+#S {
+  grid-area: S;
+}
+#D {
+  grid-area: D;
+}
+#Z {
+  grid-area: Z;
+}
+#X {
+  grid-area: X;
+}
+#C {
+  grid-area: C;
+}
+
+/* Drum Controls */
+#drum-controls {
+  margin-left: 10px;
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#display {
+  border: 1px solid rgba(0, 0, 0, 0.521);
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.514);
+}
