@@ -37,32 +37,31 @@ button {
   border-radius: 6%;
   background-color: rgba(55, 241, 201, 0.322);
 }
-
-#Q {
+#Heater {
   grid-area: Q;
 }
-#W {
+#Disc-Oh {
   grid-area: W;
 }
-#E {
+#Kick-Hat {
   grid-area: E;
 }
-#A {
+#Cev {
   grid-area: A;
 }
-#S {
+#Chord {
   grid-area: S;
 }
-#D {
+#Dry-Oh {
   grid-area: D;
 }
-#Z {
+#Punch-Kick {
   grid-area: Z;
 }
-#X {
+#Side-Stick {
   grid-area: X;
 }
-#C {
+#Side-Stick {
   grid-area: C;
 }
 
