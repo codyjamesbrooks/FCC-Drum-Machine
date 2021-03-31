@@ -2,13 +2,15 @@ import React from "react";
 
 class DrumPad extends React.Component {
   render() {
-    const playSound = (key) => {
-      let sound = document.getElementById(key);
+    const handleButton = function (event) {
+      let name = event.target.id;
+      let sound = document.getElementById(name).firstChild;
       sound.play();
     };
+
     return (
       <div id="drum-buttons">
-        <button id="Heater" className="drum-pad" onClick={() => playSound("Q")}>
+        <button id="Heater" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
             className="clip"
@@ -16,11 +18,7 @@ class DrumPad extends React.Component {
           ></audio>
           Q
         </button>
-        <button
-          id="Disc-Oh"
-          className="drum-pad"
-          onClick={() => playSound("W")}
-        >
+        <button id="Disc-Oh" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
             className="clip"
@@ -28,11 +26,7 @@ class DrumPad extends React.Component {
           ></audio>
           W
         </button>
-        <button
-          id="Kick-Hat"
-          className="drum-pad"
-          onClick={() => playSound("E")}
-        >
+        <button id="Kick-Hat" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
             className="clip"
@@ -40,7 +34,7 @@ class DrumPad extends React.Component {
           ></audio>
           E
         </button>
-        <button id="Cev" className="drum-pad" onClick={() => playSound("A")}>
+        <button id="Cev" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
             className="clip"
@@ -48,7 +42,7 @@ class DrumPad extends React.Component {
           ></audio>
           A
         </button>
-        <button id="Chord" className="drum-pad" onClick={() => playSound("S")}>
+        <button id="Chord" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
             className="clip"
@@ -56,7 +50,7 @@ class DrumPad extends React.Component {
           ></audio>
           S
         </button>
-        <button id="Dry-Oh" className="drum-pad" onClick={() => playSound("D")}>
+        <button id="Dry-Oh" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
             className="clip"
@@ -64,11 +58,7 @@ class DrumPad extends React.Component {
           ></audio>
           D
         </button>
-        <button
-          id="Punch-Kick"
-          className="drum-pad"
-          onClick={() => playSound("Z")}
-        >
+        <button id="Punch-Kick" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
             className="clip"
@@ -76,11 +66,7 @@ class DrumPad extends React.Component {
           ></audio>
           Z
         </button>
-        <button
-          id="Side-Stick"
-          className="drum-pad"
-          onClick={() => playSound("X")}
-        >
+        <button id="Side-Stick" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
             className="clip"
@@ -88,11 +74,7 @@ class DrumPad extends React.Component {
           ></audio>
           X
         </button>
-        <button
-          id="Break-Snare"
-          className="drum-pad"
-          onClick={() => playSound("C")}
-        >
+        <button id="Break-Snare" className="drum-pad" onClick={handleButton}>
           <audio
             src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
             className="clip"
