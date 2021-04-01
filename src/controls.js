@@ -9,6 +9,7 @@ class Controls extends React.Component {
         <h4 id="display-label">Drum Sound</h4>
         <label id="display">{this.props.name}</label>
         <label id="volume-label">Volume: {this.props.volume} %</label>
+        {/* React Slider. Doc: https://www.npmjs.com/package/rc-slider */}
         <Slider
           min={0}
           max={100}

@@ -2,9 +2,14 @@ import React from "react";
 
 class DrumPad extends React.Component {
   render() {
+    /* Declare soundVolume. Passed down from parent. Changed via controls.js Slider Component. */
     let soundVolume = this.props.volume / 100;
 
     const handleButton = (event) => {
+      /* Function to handle a button click (via mouse or keyboard). Method used, grab id of button clicked.
+      1. Declare sound to be the HTML audio element of the button. (the first and only child) of the event button
+      2. Set the volume property of the audio element. 
+      3. Play and enjoy. Maybe dance. It's really up to you. */
       let name = event.target.id;
       let sound = document.getElementById(name).firstChild;
       document.getElementById(name).firstChild.volume = soundVolume;
