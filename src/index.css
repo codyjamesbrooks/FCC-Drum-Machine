@@ -1,17 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Yatra+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  background: url("drums-246840_1920.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: lightgreen;
 }
 #drum-machine {
-  border: 2px solid #e1ad01;
+  border: 2px solid #e18701;
+  border-radius: 5%;
   background-color: white;
   padding: 15px;
   display: grid;
@@ -33,9 +39,10 @@ body {
   gap: 5px 5px;
 }
 button {
+  font-family: "Yatra One";
   border: 1px solid #e1ad01;
   border-radius: 6%;
-  background-color: rgba(55, 241, 201, 0.322);
+  background-color: #015be175;
 }
 #Heater {
   grid-area: Q;
@@ -72,10 +79,19 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
 }
 #display {
+  font-family: Ubuntu;
   border: 1px solid rgba(0, 0, 0, 0.521);
+  border-radius: 5%;
   text-align: center;
   background-color: rgba(128, 128, 128, 0.514);
   width: 150px;
+}
+#display-label {
+  font-family: Ubuntu;
+}
+#volume-label {
+  font-family: Ubuntu;
 }

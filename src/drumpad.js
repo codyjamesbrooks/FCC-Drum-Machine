@@ -2,9 +2,12 @@ import React from "react";
 
 class DrumPad extends React.Component {
   render() {
-    const handleButton = function (event) {
+    let soundVolume = this.props.volume / 100;
+
+    const handleButton = (event) => {
       let name = event.target.id;
       let sound = document.getElementById(name).firstChild;
+      document.getElementById(name).firstChild.volume = soundVolume;
       sound.play();
     };
 

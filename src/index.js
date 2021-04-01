@@ -51,9 +51,7 @@ class App extends React.Component {
   }
 
   sliderChange = (value) => {
-    console.log(value);
     this.setState({ volume: value });
-    console.log(this.state.volume / 100);
   };
 
   render() {
